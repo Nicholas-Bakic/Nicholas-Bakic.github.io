@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>My website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Website<br>Name</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a>
+    <a href="#jupyter lab" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Jupyter lab</a>
+    <a href="#Amazon's wild lockdown" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Amazon's wild lockdown</a>
+    <a href="#Monopolies" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Monopolies</a>
+    <a href="#Maths" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">A level maths</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Contents</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>My website</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Introduction</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+
+  <!-- Photo grid (modal)
+  <div class="w3-row-padding">
+    <div class="w3-half">
+    -->
+      <p>I chose to make this website since I wanted a way I could show projects that I get on with at home wether it is programming or maths topics</p>
+      <!--
+      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+-->
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+
+  <!-- jupyter lab -->
+  <div class="w3-container" id="jupyter lab" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Jupyter lab - python.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2><a href="C:\Users\Nicholas\Downloads\thelab.html">Link to the whole jupyter lab</A></h2>
+    <p><b>The highlights of using jupyter lab for python</b></p>
+    <p><b>I started using Jupyter lab because while learning python in school, I wanted to go a step further and start learning to use other libraries such as numpy, matplotlib or pandas which was much easier to use using
+      a notebook like jupyter - you can also click any of the pictures to zoom in.
+    </b></p>
+    <p>My first step in using matplotlib was to create basic graphs either linear or quadratic which could also help me in learning maths since I can easily create a graph using an equation or a
+    set of points. I firstly made a simple linear graph which looked like this.</p>
+    <img src="C:\Users\Nicholas\Downloads\python files\blog\image\plot.png" style="width:30%" onclick="onClick(this)" alt="Linear graph">
+    <img src="C:\Users\Nicholas\Downloads\python files\blog\image\code.jpg" style="width:30%" onclick="onClick(this)" alt="Linear graph code">The basic linear graph code
+    <p>After learning the absolute basics of matplotlib through courses on freecodecamp.org or random youtube videos that I had found, I learnt other graph styles and the ability to put them
+    in rows , all in the same cell.</p>
+    <img src="C:\Users\Nicholas\Downloads\python files\blog\image\jup.jpg" style="width:60%" onclick="onClick(this)" alt="Stacking graphs horizontally">Stacking different styles of graphs
+    <p>To end off my matplotlib journey, I learnt how to use csv files which would have data, for instance, about the price of etherium and bitcoin from 2017 which would show their price
+    and on what day it took to get their.</p>
+    <img src="C:\Users\Nicholas\Downloads\python files\blog\image\eth.jpg" style="width:40%" onclick="onClick(this)" alt="Linear graph code">Reading the csv file into memory and showing the first five results of the database with .head()
+    <p>In order to create this into a graph after reading the contents of the csv file, I ran a 'for loop' to read all of the prices and put the values into lists to be plotted; after labelling axes and the lines the graph showed up with all of the results.</p>
+    <img src="C:\Users\Nicholas\Downloads\python files\blog\image\table.jpg" style="width:48%" onclick="onClick(this)" alt="Bitcoin vs etherium price">
+  </div>
+
+  <!-- Designers
+  <div class="w3-container" id="Amazon's wild lockdown" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Amazon's wild lockdown.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>The best team in the world.</p>
+    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p><b>Our designers are thoughtfully chosen</b>:</p>
+  </div>
+-->
+  <!-- The Team
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Architect</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+  <!-- Packages / Pricing Tables -->
+
+  <!-- Blog entry -->
+<h1 class="w3-xxxlarge w3-text-red"><b>Economics based topics:</b></h1>
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+      </div>
+
+      <div class="w3-container">
+        <div class="w3-container" id="Amazon's wild lockdown" style="margin-top:75px">
+          <h1 class="w3-xxxlarge w3-text-red"><b>Amazon's wild lockdown.</b></h1>
+          <hr style="width:50px;border:5px solid red" class="w3-round">
+          <p>Over lockdown some business and companies eperienced many changes in the way they do business and some campanies' profits either plummeted or sky rocketed.
+          A company who's profits sky rocketed includes Amazon who's stock price went very high as shown in the graph below which I made using python.</p>
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\amzn.png" style="width:45%" onclick="onClick(this)" alt="Amazon stock price 16/02/20 to 10/07/20">
+          <p>Since people have turned to the online shopping lifestyle to buy items and amazon has taken huge advantage of this since, basically, if you want an item it is probably on amazon.
+          With the millions more people who signed up to amazon over lockdown, amazon found an unexpected huge growth of demand leading to the company
+          to reap the rewards of $11,000 per second. Therefore, they had to hire many more people for delivery driving
+          or working in the factories to supply all of this demand. Furthmore, amazon web serives also took off since the amount of people using this business break as an opportunity to get their websites going.
+          Overall, the amount of people having to do their groceries and spending their money turned to amazon causing a big spike of price. After all of this pandemonium of demand and profit for amazon
+        , Bezos has become the first person to be worth $200,000,000,000, even though before covid-19 he sold $3.4 billion worth of amazon stock.</p>
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+<!--
+            <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+          </div>
+          <div class="w3-col m4 w3-hide-small">
+            <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+-->
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Contact -->
+
+
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container">
+      </div>
+
+      <div class="w3-container">
+          <div class="w3-container" id="Monopolies" style="margin-top:75px">
+          <h1 class="w3-xxxlarge w3-text-red"><b>Monopolies.</b></h1>
+          <p>Monopolies exist every where in the world from poor to rich economies. For instance, the national grid which supplies everyone in Great Britain electricity.
+          But if you think about it, they do have a pure monopoly since they are the largest output of electricity and no other company is as large as them.
+          </p>
+          <p>Furthmore, it is vital that the national grid is government owned sice if you can imagine it was owned by a private company, then that would be chaos since
+          the company would just be able to determine their own prices; this would be damaging for the economy since many people would have to take loans since there would be no
+          other competition. This is why governments will believe that these kind of markets are so important for the economy that they nationalised these markets in the 1940's by the Labour government.
+          Governments may also purposefully create private monopolies like television broadcasting. This regulates consumption of the service and theoretically the government would be able to maintain
+          standards. This is an example of a natural monopoly since the start up costs are so high that is dissuades other buyers from entering the market.</p>
+          <p>Monoposonies is where a market can be controlled and dominated by a single buyer. Even though there are monopsonies like google which can be an example of as one, they also exist where
+          only people with the education and skill can do the job. For instance, let's say becoming a train conductor is so difficult that only a few hundred people in a city could become one.
+          This would create a monopsony since the supply is controlled by these conductors and if they wish to go on strike, there would be no one else to replace them since only they can do it.</p>
+
+          <p>Another case of monopolisation was the black cabs since they could be so easily hailed down on the road to call a very experienced driver who had to complete a rigorous London streets
+          test where they would be able to drive from any point to another in London without using a navigator. These black cab drivers were deliberately kept in short supply.Although a few smaller companies
+          have tried to compete, nothing has come close until the arrival of "Uber". As they boasted about benefits like cheaper prices and a driver a few buttons on the app away,
+          Uber was damaging the black cabs monopoly with the help of smartphones to create the power shift. Furthermore, the Uber app or website allowed the customer to see the driver, vehicle details,
+          pricing on the app and contact number it seemed like the obvious answer to get an Uber insead of a black cab.</p>
+
+          <p>Overall, monopolies exist everywhere in many types where they can be beneficial or disadvantageous for the people since if there is competition, they can compete against one another the price
+          of the good was slowly come down since one company lowers it, then so does the other; however, benefits can include how these companies or governments can ensure standards for the service or good.</p>
+          <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+</div>
+</div>
+</div>
+</div>
+
+<div class="w3-container" id="Maths" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>A level maths topics</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <p><b>To build on what I learn in my regular in school maths lessons, I look at what kind of quesitons of the same topic look like at A level because I not only find it interesting buit it
+  is also very helpful to increase my understanding. Especially that I am planning to do further/mathematics at A level, I believe this is very important to at least see what questions look like
+  at this difficulty and to document the questions here.</b></p>
+  <h2>Circles</h2>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\circle.jpg" style="width:30%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>If we have (𝑥-3)<sup>2</sup> + (y+4)<sup>2</sup> = 20 - then we would be able to find the centre of the circle by using the negatives of the numbers after 𝑥 and y
+  so the centre's coordinates are (3,-4). </p>
+  <p>If we wanted to prove that the circle passes through the point (5,-8) then we could just substitute in 𝑥=5 and y=-8 into the equation.</p>
+  <p>(5-3)<sup>2</sup> + (-8 + 4)<sup>2</sup> = 4 + 16, which equals 20, therefore, it works with the equation and the circle passes through the point.</p>
+
+  <h3>Next question</h3>
+
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\alevelcircle.jpg" style="width:38%" onclick="onClick(this)" alt="Exam circles question">
+  <p>Starting off with the first question, since we know the equation of the tangent, we can use it to find the equation of the line which is perpendicular to it.</p>
+  <p>We will find the negative reciprocal of the gradient of the tangent ,so, the gradient of PA is -&frac12;𝑥. So far the line's equation is y = -&frac12;𝑥 + c</p>
+  <p>Now that we have the gradient and a point on the line (7,5), we can subsitute it in.</p>
+  <p>By subsituting, we get 5 = -3.5 + c. Therefore c must equal 8.5 to make the equation true.</p>
+  <p>Even though we now know the line's equation which is y = -&frac12;𝑥 + 8.5,  we have to put in into the form specified in the question with the method below.</p>
+  <p>2y = -𝑥 + 17</p>
+  <p>2y + 𝑥 = 17</p>
+
+  <h4>Now question B:</h4>
+  <p>In order to find the equation of the circle we must use the formula for it which is (x-x<sub>1</sub>)<sup>2</sup>+ (y-y<sub>1</sub>)<sup>2</sup> = r<sup>2</sup> where x1 and y1 represents coordinates of the centre.</p>
+  <p>We will need to find the radius - we can do this by using simultaneous equations with the equations we already know in order to find point P.</p>
+  <p>If equation 1 : y = 2𝑥 + 1</p>
+  <p>If equation 2 : 2y + 𝑥 = 17 and we subsitute 1 into 2:</p>
+  <p>2(2𝑥 + 1) + 𝑥 = 17 - we do this because we know what y equals so we can subsitute it in.</p>
+  <p>This simplifies to 5𝑥 = 15 where 𝑥 = 3</p>
+  <p>Now that we know what 𝑥 equals, we can subsitute it into the first equation where we get y = 7</p>
+  <p>So, point P is (3,7)</p>
+  <p>we use this to find the radius by using pythagoras' theorem.</p>
+  <p>So, 16 + 4 = 20 which is the radius squared.</p>
+  <p>Using the formula of a circle, the equation is (𝑥-7)<sup>2</sup> + (y-5)<sup>2</sup> = 20</p>
+
+  <h4>Now question C:</h4>
+  <p>We can see that line k has the same gradient, so, it must be parallel with line l, so we can draw the tangent on the circle where it is still parallel to line l.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\added.png" style="width:30%" onclick="onClick(this)" alt="Extra tangent to the circle.">
+  <p>We need to find the point on the tangent and line(marked in red in the image above).</p>
+  <p>The displacement from point P (the original point which linked the first tangent to the circle) must be the same to the red point as it is the radius.</p>
+  <p>Since the difference from point P to the radius is to +4 the x coordinate and -2 with the y coordinate. Therefore, if we use that method from the radius to the red point, it must be (11,3)</p>
+  <P>Now, in order to find k we can subsitute in (11,3) into y = 2𝑥 + k</P>
+  <p>We get 3 = 22 + k , so, k must equal -19</p>
+  <p>k = -19 and the line equation is y = 2𝑥 - 19</p>
+
+<p>TO BE CONTINUED AFTER MY DECMEBER MOCKS.</p>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
