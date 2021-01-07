@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Nicholas-Bakic</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>My project<br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <p>Click below to go to:</p>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="jupyter.html">Jupyter lab - python</a></p>
+    <p><a href="economics.html">Economics based discussions</a></p>
+    <p><a href="maths.html">AS Maths</a></p>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Contents</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+<div class="w3-container" id="Maths" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>A level maths topics</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <p><b>To build on what I learn in my regular in school maths lessons, I look at what kind of quesitons of the same topic look like at A level because I not only find it interesting buit it
+  is also very helpful to increase my understanding. Especially that I am planning to do further and mathematics at A level, I believe this is very important to at least see what questions look like
+  at this difficulty and to document the questions here.</b></p>
+  <h2>Long polynomial division:</h2>
+  <p>Some questions I have done on polynomial division.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\first polynomial div.png" style="width:71%" onclick="onClick(this)" alt="First long polynomial division:">
+  <p>My first example of polynomial division ^</p>
+  <p>Where you keep using the divide, multiply, subtract cycle.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\2nd poly div.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <P>Another example:</P>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\3rd poly div.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Last question:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\4th poly div.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <h2>Factor theorem (sometimes using long polynomial division as well):</h2>
+  <p>The factor theorem states if f(x) is a polynomial then: (x-p) is a factor of f(x) if f(p) = 0</p>
+  <p>And it states that if (x-p) is a factor of f(x), then f(p) = 0</p>
+  <p>For instance, if (x-2) is a factor of some polynomial, then x=2 is able to be substituted into it and equal zero.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\fact theo 1.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Another example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\2nd fact theo.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Here is a factor theorem question I saw on the gcse further maths 2020 specimen paper:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\3rd fact theo.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+
+  <h1>Pascal's triangle and binomial expansion:</h1>
+  <p>What is pascal's triangle?</p>
+  <p>A triangle of integers where the left and right hand sides of the triangle are always one and start with three ones.</p>
+  <p>The number between two numbers whcih are above it are added together in order to make the next number down like so:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\Pascal's triangle.png" style="width:59%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>This is used in binomial expansion in order to quickly find out coefficients and powers of each element once expanded.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\triangle expansion.png" style="width:59%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Pascal's triangle ^ can show how powers of all the elements in the expansion all add up to the power of the factorised bracket.</p>
+  <p>Therefore, as the power of one element is subtracted by one, the power of the other element must be added by one in order to keep the power the same.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\calculator.png" style="width:59%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>You can use the ncr button on the calulator in order to work out a certain number on a specific row. Where n is the row number -1 and r is the number position -1.</p>
+  <p>But, if you don't have a calulator, you can use factorals in order to work it out. Where 4! = 4*3*2*1 = 24.</p>
+  <p>You would have to put down the row number -1 factoral, over the number's position on that row -1 factoral multiplied by the difference between the two factorals' coefficients, shown above ^^^</p>
+
+  <p>A binomial expansion:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 1.png" style="width:59%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>Here, you had to first, find out the coefficients of the numbers using Pascal's triangle and using 4ncr0,1,2,3,4 to be multiplied.</p>
+  <p>Then, start with 1<sup>4</sup> multiplied by one from Pascal's triangle. Then, after each iteration, subtract the power of 1 by 1. Then, the power of (2y) increases by one until (2y)<sup>4</sup>.</p>
+  <p>At the start, 2y isn't shown since it is orignally to the power of 0 which equals 1, so it doesn't need to be included. Same with 1 at the end which is to the power of 0.</p>
+  <p>Note that the powers of the elements always add up to the original power on the factorised bracket at the start.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 2.png" style="width:71%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>Another example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 3.png" style="width:71%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>Now for an example where the power is unknown:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 4.png" style="width:71%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>Now using binomial estimation in order to estimate the value of a value raised to a high power:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bestimation 1.png" style="width:71%" onclick="onClick(this)" alt="Binomial estimation">
+  <p>Another binomial estimation:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bestimation 2.png" style="width:71%" onclick="onClick(this)" alt="Binomial estimation">
+  <p>Back to binomial expansion again:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 5.png" style="width:71%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>Another example of binomial expansion:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 6.png" style="width:71%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>I also found this question on the edexcel AS paper 1 2018:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 8.png" style="width:71%" onclick="onClick(this)" alt="Binomial expansion">
+  <p>Lastly, here is a very long binomial expansion question. It required a lot of working since the power is unknown, therefore, you have to set up an equation where, for instance, nc2 had to be set up as an equation using n's. Then, make the coefficients equal and setp up a simultaneous equation in order to find out what the unknown variables were.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\bexpansion 7.png" style="width:101%" onclick="onClick(this)" alt="Binomial expansion">
+
+  <h2>Differentiation:</h2>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff1.png" style="width:71%" onclick="onClick(this)" alt="Differentiation">
+  <p>Example of finding dy/dx for a given equation:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff2.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Another example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff3.png" style="width:33%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Next example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff5.png" style="width:48%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Next example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff6.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Next example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff7.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Next example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff8.png" style="width:71%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Now using lims:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff9.png" style="width:40%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>Next example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff10.png" style="width:71%" onclick="onClick(this)" alt="Differentiation">
+<p>next example using limits:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff11.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 11">
+<p>More using lims</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff12.png" style="width:50%" onclick="onClick(this)" alt="Differentiation 12">
+<p>Next example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff13.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 13">
+<p>Finding points whith gradients:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff15.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 15">
+<p>Using binomial expansion and differentiation:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff16.png" style="width:63%" onclick="onClick(this)" alt="Differentiation 16">
+<p>How to find the equations of tangents to curves at certain points:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff17.png" style="width:55%" onclick="onClick(this)" alt="Differentiation 17">
+<p>Example:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff18.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 18">
+<p>How to find the equation of a normal to a curve:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff19.png" style="width:60%" onclick="onClick(this)" alt="Differentiation 19">
+<p>Example of finding a normal:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff20.png" style="width:42%" onclick="onClick(this)" alt="Differentiation 20">
+<p>Another example of finding a normal:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff21.png" style="width:42%" onclick="onClick(this)" alt="Differentiation 21">
+<p>Using tangents and normals:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff22.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 22">
+<p>Example of using 2 normals:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff23.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 23">
+<P>Using tangents and normals:</P>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff24.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 24">
+<p>Proving for an increasing function:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff25.png" style="width:30%" onclick="onClick(this)" alt="Differentiation 25">
+<p>Finding an interval where the function is negative:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff26.png" style="width:30%" onclick="onClick(this)" alt="Differentiation 26">
+<p>Finding an interval where the function is negative:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff27.png" style="width:50%" onclick="onClick(this)" alt="Differentiation 27">
+<p>How to find second order derivatives:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff28.png" style="width:60%" onclick="onClick(this)" alt="Differentiation 28">
+<p>Finding the second order derivative:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff29.png" style="width:41%" onclick="onClick(this)" alt="Differentiation 29">
+<p>Using the second order derivative to find the acceleration of a particle:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff30.png" style="width:50%" onclick="onClick(this)" alt="Differentiation 30">
+<p>Using second order derivatives to find the value of unknown letter "p"</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff31.png" style="width:42%" onclick="onClick(this)" alt="Differentiation 31">
+<p>How to find a stationary point and how to find if it a local min/maximum point:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff32.png" style="width:48%" onclick="onClick(this)" alt="Differentiation 32">
+<p>Using second order derivatives to find if a stationary point is a min/miximum point:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff34.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 34">
+<p>We can find the least values of quadratic equations by instead of using the "complete the square" method, we can just find the point of zero gradient which is much faster:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff35.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 35">
+<p>Here we are going to do the same but since they are negative functions, we are finding the minimum point:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff36.png" style="width:55%" onclick="onClick(this)" alt="Differentiation 36">
+<p>Finding a local minimum point:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff38.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 38">
+<p>Finding a point of inflection(where the gradient is the same on both sides:)</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\diff38.png" style="width:71%" onclick="onClick(this)" alt="Differentiation 38">
+
+<h2>Integration</h2>
+<p>Integration is simply the opposite of differentiation.</p>
+<p>How to integrate:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a1.png" style="width:61%" onclick="onClick(this)" alt="Integration 1">
+<P>Integration example. We always have to add " +c " here since when differentiating, a number like "+5" disappears, but it's still apart of the  original function</P>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a2.png" style="width:45%" onclick="onClick(this)" alt="Integration 2">
+<p>Another example:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a3.png" style="width:45%" onclick="onClick(this)" alt="Integration 3">
+<p>Another example of integration, but now using the integration notation where the elongated s means to integrate and find y:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a4.png" style="width:35%" onclick="onClick(this)" alt="Integration 4">
+<p>Finding integrals:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a5.png" style="width:78%" onclick="onClick(this)" alt="Integration 5">
+<p>Binomial expansion and using integration:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a6.png" style="width:71%" onclick="onClick(this)" alt="Integration 6">
+<p>Integrating and finding c:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a7.png" style="width:71%" onclick="onClick(this)" alt="Integration 7">
+<p>Finding particle displacement with integration:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a8.png" style="width:71%" onclick="onClick(this)" alt="Integration 8">
+<p>Here, we are going to use definite integrals, which can be used to find areas under curves between certain x points. The steps are that we integrate, then minus the lower limit substitution from the larger limit substituation in order to find the area like so:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a9.png" style="width:71%" onclick="onClick(this)" alt="Integration 9">
+<p>Finding an unknown with integration:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a10.png" style="width:71%" onclick="onClick(this)" alt="Integration 10">
+<p>Another example of finding an unknown:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a11.png" style="width:71%" onclick="onClick(this)" alt="Integration 11">
+<p>A quick note on an integration rule for the next question:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a11.5.png" style="width:50%" onclick="onClick(this)" alt="Integration 11.5">
+<p>MAT 2020 Q1B: Simplifying using integration and the rule above:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a12.png" style="width:71%" onclick="onClick(this)" alt="Integration 12">
+<p>How to find the area under a curve with integration, with an example from the textbook:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a13.png" style="width:71%" onclick="onClick(this)" alt="Integration 13">
+<p>Area between the curve and the x axis:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a14.png" style="width:71%" onclick="onClick(this)" alt="Integration 14">
+<p>More example of the area between a curve and the x axis:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a15.png" style="width:71%" onclick="onClick(this)" alt="Integration 15">
+An example of finding the area under a curve between two points:
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a16.png" style="width:71%" onclick="onClick(this)" alt="Integration 16">
+<p>Another example:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a17.png" style="width:64%" onclick="onClick(this)" alt="Integration 17">
+<p>Another area between a curve and the x axis question:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a18.png" style="width:71%" onclick="onClick(this)" alt="Integration 18">
+<p>A textbook example of finding the area between the x axis and part of the curve which is under the x axis:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a19.png" style="width:55%" onclick="onClick(this)" alt="Integration 19">
+<p>Examples where we have to find the roots (which are the limits) and then integrate:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a20.png" style="width:88%" onclick="onClick(this)" alt="Integration 20">
+<p>Below, we have to finding two areas by finding the two pairs of x roots and then adding up the two areas to find the total area.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a21.png" style="width:86%" onclick="onClick(this)" alt="Integration 21">
+<p>Another example:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a22.png" style="width:86%" onclick="onClick(this)" alt="Integration 22">
+<p>A textbook example of minusing two areas and finding the area of a triangle to find the area of a small part between two functions:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a23.png" style="width:60%" onclick="onClick(this)" alt="Integration 23">
+<p>An example of finding the area between two functions:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a24.png" style="width:79%" onclick="onClick(this)" alt="Integration 24">
+<p>Another example:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a25.png" style="width:80%" onclick="onClick(this)" alt="Integration 25">
+<p>Another example of finding the area between two functions:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a26.png" style="width:79%" onclick="onClick(this)" alt="Integration 26">
+<p>In the question below we have to find the of two different sections where we can find the area of the R<sub>2</sub> by using a right angle triangle and finding the area of the small yellow bit in the triangle and minus them to find the area of only R<sub>2</sub>.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a27.png" style="width:83%" onclick="onClick(this)" alt="Integration 27">
+<p>Areas between two functions, another example:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a28.png" style="width:83%" onclick="onClick(this)" alt="Integration 28">
+<p>AS Level 2018 Q15, finding the area under a curve and area of a triangle:</p>
+<p>Here we have to first find the equation of the normal in order to find points we need to find areas. Then, we can split up R into R<sub>1</sub> and R<sub>2</sub> where we can add the areas under the curve and the triangle to find the total area, R.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\a29.png" style="width:71%" onclick="onClick(this)" alt="Integration 29">
+
+
+  <h2>Circles</h2>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\circle.png" style="width:30%" onclick="onClick(this)" alt="Using python to create the circle in the question below">
+  <p>If we have (𝑥-3)<sup>2</sup> + (y+4)<sup>2</sup> = 20 - then we would be able to find the centre of the circle by using the negatives of the numbers after 𝑥 and y
+  so the centre's coordinates are (3,-4). </p>
+  <p>If we wanted to prove that the circle passes through the point (5,-8) then we could just substitute in 𝑥=5 and y=-8 into the equation.</p>
+  <p>(5-3)<sup>2</sup> + (-8 + 4)<sup>2</sup> = 4 + 16, which equals 20, therefore, it works with the equation and the circle passes through the point.</p>
+
+  <h3>Next question</h3>
+
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\alevelcircle.png" style="width:38%" onclick="onClick(this)" alt="Exam circles question">
+  <p>Edexcel A level pure maths 2018 paper 1 Q6</p>
+  <p>Starting off with the first question, since we know the equation of the tangent, we can use it to find the equation of the line which is perpendicular to it.</p>
+  <p>We will find the negative reciprocal of the gradient of the tangent ,so, the gradient of PA is -&frac12;𝑥. So far the line's equation is y = -&frac12;𝑥 + c</p>
+  <p>Now that we have the gradient and a point on the line (7,5), we can subsitute it in.</p>
+  <p>By subsituting, we get 5 = -3.5 + c. Therefore c must equal 8.5 to make the equation true.</p>
+  <p>Even though we now know the line's equation which is y = -&frac12;𝑥 + 8.5,  we have to put in into the form specified in the question with the method below.</p>
+  <p>2y = -𝑥 + 17</p>
+  <p>2y + 𝑥 = 17</p>
+
+  <h4>Now question B:</h4>
+  <p>In order to find the equation of the circle we must use the formula for it which is (x-x<sub>1</sub>)<sup>2</sup>+ (y-y<sub>1</sub>)<sup>2</sup> = r<sup>2</sup> where x1 and y1 represents coordinates of the centre.</p>
+  <p>We will need to find the radius - we can do this by using simultaneous equations with the equations we already know in order to find point P.</p>
+  <p>If equation 1 : y = 2𝑥 + 1</p>
+  <p>If equation 2 : 2y + 𝑥 = 17 and we subsitute 1 into 2:</p>
+  <p>2(2𝑥 + 1) + 𝑥 = 17 - we do this because we know what y equals so we can subsitute it in.</p>
+  <p>This simplifies to 5𝑥 = 15 where 𝑥 = 3</p>
+  <p>Now that we know what 𝑥 equals, we can subsitute it into the first equation where we get y = 7</p>
+  <p>So, point P is (3,7)</p>
+  <p>we use this to find the radius by using pythagoras' theorem.</p>
+  <p>So, 16 + 4 = 20 which is the radius squared.</p>
+  <p>Using the formula of a circle, the equation is (𝑥-7)<sup>2</sup> + (y-5)<sup>2</sup> = 20</p>
+
+  <h4>Now question C:</h4>
+  <p>We can see that line k has the same gradient, so, it must be parallel with line l, so we can draw the tangent on the circle where it is still parallel to line l.</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\added.png" style="width:30%" onclick="onClick(this)" alt="Extra tangent to the circle.">
+  <p>We need to find the point on the tangent and line(marked in red in the image above).</p>
+  <p>The displacement from point P (the original point which linked the first tangent to the circle) must be the same to the red point as it is the radius.</p>
+  <p>Since the difference from point P to the radius is to +4 the x coordinate and -2 with the y coordinate. Therefore, if we use that method from the radius to the red point, it must be (11,3)</p>
+  <P>Now, in order to find k we can subsitute in (11,3) into y = 2𝑥 + k</P>
+  <p>We get 3 = 22 + k , so, k must equal -19</p>
+  <p>k = -19 and the line equation is y = 2𝑥 - 19</p>
+
+
+  <h2>Next question - C2 Edexcel June 2012 Q3</h2>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\morecircle.png" style="width:38%" onclick="onClick(this)" alt="Another circles question.">
+  <p></p>
+  <p>Since the equation of the circle is 𝑥<sup>2</sup> + y<sup>2</sup> - 20𝑥 -16y + 139 = 0, we can "complete the sqaure" to put it in the normal equation of a circle.</p>
+  <p>(𝑥 - 10)<sup>2</sup>- 100 + (y - 8)<sup>2</sup> -64 + 139 = 0</p>
+  <p>Which can simplify to (𝑥-10)<sup>2</sup> + (y-8)<sup>2</sup> -25 = 0, which simplifies to (𝑥 - 10)<sup>2</sup> + (y - 8)<sup>2</sup> = 25</p>
+  <p>Therefore, the coordinates of the centre of the circle are (10,8) and the centre is the <span>&#8730;25</span> which is 5. Circle radius is 5.</p>
+  <p>C) Using (𝑥 - 10)<sup>2</sup> + (y - 8)<sup>2</sup> = 25 we can substitute in x = 13</p>
+  <p>Which brings us (13-10)<sup>2</sup> + (y-8)<sup>2</sup> = 25</p>
+  <p>Which equals 9 + (y-8)<sup>2</sup> = 25</p>
+  <p>(y-8)<sup>2</sup> = 16</p>
+  <p>y-8 = &plusmn;4 therefore y = &plusmn;4 + 8</p>
+  <p>So, point Q has y coordinate of 4 and point P has y coordinate of 12</p>
+  <p>d) Find the perimeter of the sector:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\working.png" style="width:38%" onclick="onClick(this)" alt="Adding lines to the sector">
+  <p>We already know that a red line is equal to the radius, so they equal 5 each.</p>
+  <p>Using radians to find the arc length we can use the formula &thetasym;/2π * 2πr.</p>
+  <p>So, 1.855/2π * 2πr = 9.275 - you can also cancel out the "2π"s as well.</p>
+  <p>As a result, 9.275 + 5 + 5 = 19.275 which is the perimeter of the sector PTQ.</p>
+
+  <h2>Last circles question - Edexcel C2 Jan 2010 Q8</h2>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\figure.png" style="width:38%" onclick="onClick(this)" alt="The circle">
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\questions.png" style="width:38%" onclick="onClick(this)" alt="The quesitons about the circle above">
+  <p>a) (2,-1)</p>
+  <p>b) radius equals <span>&#8730;</span> 169&frasl;4 - so the radius can be expressed as 13/2 which is 6.5</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\diagram.png" style="width:30%" onclick="onClick(this)" alt="Labelled circle">I will be referring to this diagram in question c)
+  <p>c) We can make a line from N to line AB and split line AB into two lines going a distance of 6 in each direction.</p>
+  <p>This helps us since we can add or subtract 6(the distance in each direction) from 2(which is the x coordinate of the radius).</p>
+  <p>The blue point in the diagram above has x coordinate of 2 - 6 = 4, so far it has coordinates of (-4, ?)</p>
+  <p>And the green point has coordinates (8, ?)</p>
+  <p>In order to find the y coordinates, we can subsitute in the x coordinate into the circle's formula to satisfy the equation and get a y coordinates.</p>
+  <p>We can use (8, ?), so, using the circle's formula of (𝑥-2)<sup>2</sup> + (y+1)<sup>2</sup> = 169/4 we get:</p>
+  <p>36 + (y+1)<sup>2</sup> = 169/4</p>
+  <p>(y+1)<sup>2</sup> = 25/4</p>
+  <p>y+1 = &plusmn;25/4 - which can be expressed as y + 1 = &plusmn;5/2</p>
+  <p>y = &plusmn;45/2 - 1</p>
+  <p>So, the two y coordinates for the points are either 1.5 or -3.5; we can use the fact that the points are both under the y axis and share the same y point, therefore, both points have y coordinates of -3.5.</p>
+  <p>So, point A has coordinates of (-4, -3.5) and point B has coordinates of (8, -3.5)</p>
+  <h4>Question d)</h4>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\proof.png" style="width:47%" onclick="onClick(this)" alt="Proof for d)">
+  <h4>Lastly, question e) - finding length AP.</h4>
+  <p>Knowing that the radius is 6.5, and we have the angle ANB, we can create the lines and angles:</p>
+  <img src="C:\Users\Nicholas\Downloads\python files\blog\image\last.png" style="width:54%" onclick="onClick(this)" alt="Final question diagram">
+
+  <div class="w3-container" id="UKMT" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Maths questions from UKMT papers.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  <p><b>I have grown to be a big fan of UK maths challenge papers since every year I would a paper at school in either a classroom on in a hall where I really liked the thinking
+  required in order to complete these papers but it also gave me experience in doing papers in halls in exam conditions which gave me experience for what GCSEs being taken in the hall
+  feel like. Afterwards, I would go online and look at the answers of the paper I took and learn from my mistakes. I have found myself looking at more difficult UKMT papers and I thought
+  it would be a great idea to show some of the questions I have looked at.</b></p>
+
+  <h3>UKMT Senior Kangaroo 2016 Q18</h3>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\squares.png" style="width:70%" onclick="onClick(this)" alt="Senior Kangaroo 2016 Q18">
+<p>First of all, letter n can represent an integer.
+We can represent the consecutive squared numbers from the question like:</p>
+<p>n + (n+1)<sup>2</sup> + (n+2)<sup>2</sup> + (n+3)<sup>2</sup> = (n+4)<sup>2</sup> + (n+5)<sup>2</sup> + (n+6)<sup>2</sup></p>
+<p>Once all expanded, it equals n<sup>2</sup> + n<sup>2</sup> + 2n + 1 + n<sup>2</sup> + 4n + 4 + n<sup>2</sup> + 6n + 9 = n<sup>2</sup> + 8n + 16 + n<sup>2</sup> + 10n + 25 + n<sup>2</sup> + 12n + 36</p>
+<p>Which can be written as 4n<sup>2</sup> + 12n + 14 = 3n<sup>2</sup> + 30n + 77</p>
+<p>Which can be written as n<sup>2</sup> - 18n - 63 = 0 ,therefore, we can use the fact that we have a quadratic which equals zero to factorise into:</p>
+<p>(n - 21)(n + 3) where n = 21, n = -3 - since the question tells us these are postive integers, n = 21</p>
+<p>As the question asks for the square of this number (21<sup>2</sup>), the answer is 441</p>
+
+  </body>
+  </html>
