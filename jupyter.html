@@ -70,7 +70,7 @@ to get their finger on the pulse on which asset they might want to invest in. I 
 
 <h2>Making a bell curve in python:</h2>
 <p>Following my lessons on bell curves and my work at home on the Central Limit Theorem, I though it would be interesting to learn how to program it, after all it is much faster than using a pen and paper with a calulator.</p>
-<p>Firstly we have to know the actual equation of a bell curve in order to program it into python. It looks and is complicated but with can put it into out program using the module "numpy" it is much easier since there are already presets for pi, exponentials and square rooting:</p>
+<p>Firstly we have to know the actual equation of a bell curve in order to program it into python. It looks and is complicated but with can put it into out program using the module "numpy" it is much easier since there are already presets for pi, exponentials and e which is Euler's number (shown as np.exp() where the number inside the bracket is the power of e, as shown in the equation above)</p>
 <img src="bellformula.png" style="width:27%" onclick="onClick(this)" alt="Bell curve formula">
 <p>Here is the code for the bell curve: First you have to define the variables for the mean and standard deviation in order to crate a bell curve and then define the bell curve formula above. In order to make the points you use: np.arange(-2, 2, 0.1) which means draw a bell curve from the points -2 and 2, making a point every 0.1. In order to fill the bell curve's area underneath which I always like to draw, you have to use plt.fill_between and then the start and end points.</p>
 <img src="belltext.png" style="width:40%" onclick="onClick(this)" alt="Bell curve code">
