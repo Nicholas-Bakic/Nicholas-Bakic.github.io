@@ -23,8 +23,9 @@ body {font-size:16px;}
     <p>Click below to go to:</p>
     <p><a href="index.html">Home</a></p>
     <p><a href="jupyter.html">Jupyter lab - python</a></p>
-    <p><a href="economics.html">Economics based discussions</a></p>
+    <p><a href="economics.html">Economics</a></p>
     <p><a href="maths.html">AS Maths</a></p>
+    <p><a href="fm.html">Going ahead in Further Maths</a></p>
   </div>
 </nav>
 
@@ -48,8 +49,10 @@ body {font-size:16px;}
   <hr style="width:50px;border:5px solid red" class="w3-round">
   <p><b>The highlights of using jupyter lab for python</b></p>
   <p><b>I started using Jupyter lab because while learning python in school, I wanted to go a step further and start learning to use other libraries such as numpy, matplotlib or pandas which was much easier to use using
-    a notebook like jupyter.
-  </b></p>
+    a notebook like jupyter - you can also click any of the pictures to zoom in.</b></p>
+<b><p>But now that JP Morgan have introduced new staff requirements of all new investment bankers and managers
+through a python programming course unless they already know the theory. They do this because python is a means of aggregating large amounts of data quickly and easily allowing them to be represented in a simple graph. Pythonb also allows of real time pulling of data in order for staff
+to get their finger on the pulse on which asset they might want to invest in. I believe that they are setting a precedence and other banks/firms will see how important programming knowledge is.</p></b>
   <p>My first step in using matplotlib was to create basic graphs either linear or quadratic which could also help me in learning maths since I can easily create a graph using an equation or a
   set of points. I firstly made a simple linear graph which looked like this.</p>
   <img src="plot.png" style="width:30%" onclick="onClick(this)" alt="Linear graph">
@@ -57,7 +60,7 @@ body {font-size:16px;}
   <p>After learning the absolute basics of matplotlib through courses on freecodecamp.org or random youtube videos that I had found, I learnt other graph styles and the ability to put them
   in rows , all in the same cell.</p>
   <img src="jup.png" style="width:60%" onclick="onClick(this)" alt="Stacking graphs horizontally">Stacking different styles of graphs
-  <h3>Working with a large amount of numbers and probability and chaos theory using python:</h3>
+ <h3>Working with a large amount of numbers and probability and chaos theory using python:</h3>
  <p>I was learning interested in probabilities and chaos theory - stating that apparently random events have underlying patterns and I decided to launch an experiment.
  The experiment would be about finding the average number of times it took to do a certain task. For instance, the odds of a random number generator picking the number 1 out of
   the range 1 to 100 is theoretically a 1% chance, meaning it would take a hundred tries to land on 1, on average, however, when I ran it a couple of times, you get extremely varying
@@ -72,23 +75,32 @@ body {font-size:16px;}
   <img src="largest.PNG" style="width:60%" onclick="onClick(this)" alt="Stacking graphs horizontally">
   <p>The code above is the last piece. It goes through the whole file of numbers, puts it into a list and then prints the first element of the sorted list.
   This code works by using a list comprehension which I like to use since it can be all put into a single line. You initiate the loop with a traditional for loop then before it the lone "num" is what's being appened to the list x. The 'sorted(reverse=True)' sorts the list, but in ascending order which I didn't want so instead I said reverse=True which puts it in reverse which is descending order. This code allows me to see the largest amount of times the program took to generate the number 1. by selecting the first element in the list by indexing it by using [0].</p>
-  <p>Now for the actual experiment, I ran the first piece of code for a few minutes and around 3.7 million numbers(attempts) were made, <p><a href="numbers.html">here are the first 1500 numbers in the file.</a></p>
+  <p>Now for the actual experiment, I ran the first piece of code for a few minutes and around 3.7 million numbers(attempts) were made, <p><a href="numbers.html">here is 1500 of the numbers.</a></p>
 
   <p>I can't really give you access to all the numbers but here is the image of the last lines of the notepad.</p>
   </a></p>
   <img src="line.PNG" style="width:40%" onclick="onClick(this)" alt="Linear graph code">
-  <p>So I ran the last two pieces of code (working out the mean and the largest number in the file) and here is what happened:</p>
+  <p>So I ran the first two pieces of code and here is what happened:</p>
   <img src="result.PNG" style="width:40%" onclick="onClick(this)" alt="Linear graph code">
   <p>The first line represents the amount of terms there were, the 2nd line is the total of the all the numbers added up, the third line is the mean and the last line is the most attempts the program took to generate the number 1.</p>
   <p>The results show that although literally millions of numbers in range of 1 to 998, the average still is extremely close to the theoretic value of 100 which surprised me since I thought the average at the end was going to be much further away than that. This could refer to chaos theory since although the numbers were made randomly from a certain zone, there still seems to be an underlying pattern here as the average is so close to the theoretical value.
-  It is also worth mentioning that the largest number in the file is almost exactly 10x the average and theoretical value which might just be a coincidence or linked to the probablity and average by I am not sure I would have to conduct more tests to see if there is any correlation or causation. But overall, it was very intersting to see the theoretical value and the real average so close together.</p>
+  It is also worth mentioning that the largest number in the file is almost exactly 10x the average and theoretical value which might just be a coincidence or linked to the probablity and average by I am not sure I would have to conduct more tests to see if there is any correlation or causation. But overall, it was very intersting to see the theoretical value and the real avergae so close together.</p>
 
 <h2>Finishing matplotlib:</h2>
-<p>To finish off using matplotlib I decided to create a graph of bitcoin vs etherium price by reading into a csv file with all the data and plotting it like so:</p>  
+<p>To finish off using matplotlib I decided to create a graph of bitcoin vs etherium price by reading into a csv file with all the data and plotting it like so:</p>
   <img src="eth.png" style="width:40%" onclick="onClick(this)" alt="Linear graph code">Reading the csv file into memory and showing the first five results of the database with .head()
   <p>In order to create this into a graph after reading the contents of the csv file, I ran a 'for loop' to read all of the prices and put the values into lists to be plotted; after labelling axes and the lines the graph showed up with all of the results.</p>
   <img src="ethg.png" style="width:48%" onclick="onClick(this)" alt="Bitcoin vs etherium price">
 </div>
+
+<h2>Making a bell curve in python:</h2>
+<p>Following my lessons on bell curves and my work at home on the Central Limit Theorem, I though it would be interesting to learn how to program it, after all it is much faster than using a pen and paper with a calulator.</p>
+<p>Firstly we have to know the actual equation of a bell curve in order to program it into python. It looks and is complicated but with can put it into out program using the module "numpy" it is much easier since there are already presets for pi, exponentials and square rooting:</p>
+<img src="bellformula.png" style="width:27%" onclick="onClick(this)" alt="Bell curve formula">
+<p>Here is the code for the bell curve: First you have to define the variables for the mean and standard deviation in order to crate a bell curve and then define the bell curve formula above. In order to make the points you use: np.arange(-2, 2, 0.1) which means draw a bell curve from the points -2 and 2, making a point every 0.1. In order to fill the bell curve's area underneath which I always like to draw, you have to use plt.fill_between and then the start and end points.</p>
+<img src="belltext.png" style="width:40%" onclick="onClick(this)" alt="Bell curve code">
+<p>Here is the curve itself</p>
+<img src="bellcurve.png" style="width:40%" onclick="onClick(this)" alt="Bell curve">
 
 </body>
 </html>
