@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Nicholas-Bakic</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>My project<br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <p>Click below to go to:</p>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="jupyter.html">Jupyter lab - python</a></p>
+    <p><a href="economics.html">Economics</a></p>
+    <p><a href="maths.html">AS Maths</a></p>
+    <p><a href="fm.html">Going ahead in Further Maths</a></p>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Contents</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+        <div class="w3-container" id="CLT" style="margin-top:75px">
+          <h1 class="w3-xxxlarge w3-text-red"><b>Central limit theorem (CLT)</b></h1>
+          <hr style="width:50px;border:5px solid red" class="w3-round">
+          <p>On this page I want to go through the next topic I am going to look at in class which is the Central Limit Theorem (CLT) which uses the bell curve knowledge we already have but now we have to apply it to not only other distributions but also different situations in order to find probabilities of certain events happeneing or finding the sample size of a probability happening.</p>
+          <p>The first question is pretty standard, we have the mean which is the y axis on the curve and we have the standard deviation, what we need in order to draw a bell curve. The next question though is more unfamiliar since given a certain probability range we must find the sample size required.</p>
+          <p>I like the use of bell curves since it is very easy to grasp (as oppposed to other graphs in further maths/statistics) and I started using them when I found out they were used to measure sill in games. For instance, the "skill level" can be on the x axis, where being the worst at a game is on the far right and being the best is on the far left. Being extrememly bad at a game doesn't last long so you are moved right from the far left of the graph into the middle where it is hard to move right as that is where the best players who have been playing for years are situated.</p>
+
+          <h3>The Central Limit Theorem in finance:</h3>
+<p>The CLT is useful when examining the returns of an individual stock or broader indices, because the analysis is simple, due to the relative ease of generating the necessary financial data.
+Consequently, investors of all types rely on the CLT to analyze stock returns, construct portfolios, and manage risk.
+To be safe, use at least 30-50 randomly selected stocks (or in the textbook questions make sure there are at least 30-50 samples of what you are testing)
+across various sectors, should be sampled for the central limit theorem to hold.</p>
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5a3.png" style="width:80%" onclick="onClick(this)" alt="CLT Questions">
+          <p>In the first question I have demonstrated basic use of a bell curve and finding the probabiltity of being at a certain point on there. b) is slightly harder as you have the probabilty but you do not have the sample size, but with some algebraic manipulation you can get the sample size.</p>
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5a4.png" style="width:62%" onclick="onClick(this)" alt="CLT Questions">
+          <p>In the next question I will instead be using a discrete probabilty distribution table to get data and model normally.</p>
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5a7.png" style="width:72%" onclick="onClick(this)" alt="CLT Questions">
+          <p>The next question now introduces situations where modelling normally isn't always accurate if the data you are modelling is not symmetrical, which a bell curve needs to be.</p>
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5a9.png" style="width:70%" onclick="onClick(this)" alt="CLT Questions">
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5a10.png" style="width:87%" onclick="onClick(this)" alt="CLT Questions">
+          <h1 class="w3-xxxlarge w3-text-red"><b>Central limit theorem using other distributions</b></h1>
+          <p>After the question above I am going to show questions which use data from other statistical distributions which we have gone through in class (e.g the geometric, poisson and (Negative) binomial distributions). These questions are harder since finding the mean, the expected value or E(X), and variance, or Var(X), from the here is harder. </p>
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5b2.png" style="width:55%" onclick="onClick(this)" alt="CLT Questions">
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5b7.png" style="width:78%" onclick="onClick(this)" alt="CLT Questions">
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\5b8.png" style="width:80%" onclick="onClick(this)" alt="CLT Questions">
+          <img src="C:\Users\Nicholas\Downloads\python files\blog\image\m59.png" style="width:60%" onclick="onClick(this)" alt="CLT Questions">
+
+
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+
+          </div>
+        </div>
+      </div>
+
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+          <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+</div>
+</div>
+</div>
+
+</body>
+</html>
