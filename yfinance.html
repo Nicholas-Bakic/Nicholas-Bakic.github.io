@@ -48,23 +48,24 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Python for analysis</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
 <h5>Here I am going to show you how to use the Python libraries: Yahoo! Finance and ta (short for technical analysis)in
-order to perform fundamental and technical analysis on any stock that the Yahoo finance API supports (e.g AAPL, ^FTSE, GBP/USD pair).
+order to perform fundamental and technical analysis on any stock that the Yahoo finance API supports.
 The methods used for plotting graphs can also be used for forex rates and index funds (e.g ^FTSE, GBP-USD). But,
 some of the fundamental analysis like measuring earnings and debts cannot be used. 
 </h5>
 
-<h5>At the start, I am going to show how I programmed each indicator/factor, section by section and then I am going to group them all up for analysis on any stock that the Yahoo Finance API supports.
-  And then at the end I am going to show you an example of performing fundamental and technical analysis for Microsoft stock which could help make an investment decision</h5>
+<h5>At the start, I am going to show how I programmed each indicator/factor, section by section and then I am going to group them all up for analysis on Google
+  which could help make an investment decision.</h5>
 
 <p>Firstly, how do we get any market data from Yahoo Finance?</p>
-<p>We first need to import the Yahoo Finance  library called yfinance and we are going to make a shorter name for it just called yf
-Then we can pick a supported stock like Microsoft (Symbol: MSFT) in order to get some information on the company</p>
+<p>We first need to import the Yahoo Finance library called yfinance and we are going to make a shorter name for it just called yf.
+Then we can pick a supported stock like Microsoft (Symbol: MSFT) in order to get some information on the company.</p>
 
 <p>Getting market data on MSFT, including Open, High, Low, Close prices and volume traded in a specific time frame e.g 100 days</p>
+<p>.history gathers all the market history data Yahoo has.</p>
 <img src="yf1.png" style="width:44%" onclick="onClick(this)" alt="Generating">
 <p>Here ^ we had to use the Ticker module in order to access the ticker data from the API</p>
 <p>In order to get some data (from the last 4 years) for fundamental analysis like Revenue, Cash, Long term debt and Total assets/liabilities:</p>
-<img src="yf2.png" style="width:40%" onclick="onClick(this)" alt="Generating">
+<img src="yf2.png" style="width:35%" onclick="onClick(this)" alt="Generating">
 <p>You can use this information to do a couple calculations:</p>
 <p>For instance, we can find out if the long term debt of Microsoft is growing by doing msft.balance_sheet and then
 using .iloc[] to find the location of a specific piece of data. If you look back on the balance sheet, on the third to last row
@@ -74,9 +75,9 @@ on the first and second columns (or using 0 and 1 for iteration in Python) to se
 <p>We can then use the code above to compare the two values and calculate if their long term debt has grown in the past year</p>
 
 <p>If you do msft.info you also gets lots of information, so much it doesn't even fit on the page. So you can specify which data you want to pick
-out, for instance, the trailing PE and forward PE. PE stands for Price to eanrings ratio which some people like to use in order to try
-to determine if a stock price is overvalued by comparing this value with similar companies. A "forward PE" is the estimated, future PE ratio, the trailing PE value
-creates a PE value based on previous and current prices to find what the current PE ratio is.</p>
+out, for instance, the trailing PE and forward PE. PE stands for Price to Earnings ratio which some people like to use in order to try
+to determine if a stock price is overvalued by comparing this value with similar companies. A "forward PE" is the estimated, future PE ratio but the trailing PE value
+is based on previous and current prices to find what the current PE ratio is.</p>
 <img src="yf3.png" style="width:30%" onclick="onClick(this)" alt="Generating">
 <h4>Let's start plotting:</h4>
 <p>We can plot the stock price on a graph (comments on the code itself explain most lines)</p>
@@ -85,23 +86,23 @@ creates a PE value based on previous and current prices to find what the current
 <img src="yf13.png" style="width:20%" onclick="onClick(this)" alt="Generating">
 <h4>Technical analysis indicators:</h4>
 <p>Here I am going to show you how to implement technical analysis with Python. We are going to be able to use
-indicators like RSI and bollinger bands by using the ta (technical analyis) library.</p>
+indicators like RSI and Bollinger Bands by using the ta (technical analyis) library.</p>
 
-<p>Let's use Facebook as an example here which will be especially entertaining since the stock price just fell a couple of
-days ago due to a sharp rise in expenses and overall less daily users which together make for low future confidence in the company.</p>
+<p>Let's use Facebook as an example here which will be especially entertaining since the stock price just plummeted a couple of
+days ago due to a sharp rise in expenses and overall less daily users, which added together makes for low future confidence in the company.</p>
 
 <img src="yf5.png" style="width:65%" onclick="onClick(this)" alt="Generating">
 <p>So, what is happening here?</p>
-<p>Well on line 5 we use .reset_index()[["Date", Close]] in order to pick out specifically all of the data of dates and closing prices which is in a form we
-can easily plot on a graph with plt.plot. Then, ta.momentum.RSIIndicator...).rsi() basically means that from the
+<p>Well on line 5 we use .reset_index()[["Date", Close]] in order to pick out specifically all of the dates and closing prices which is in a form we
+can easily plot on a graph with plt.plot where the corresponding dates and prices are matched together. Then, ta.momentum.RSIIndicator...).rsi() basically means that from the
   ta library, go to the module on momentum indicators which is where the RSI indicator is and .rsi() calculates these values for us.
 
-<p>Note, RSI (Relative Strength Index is used to measure of a stock is oversold or overbought by comparing the magnitudes of recent gains and losses over a certain amount
+<p>Note, RSI - Relative Strength Index - is used to measure whether a stock is oversold or overbought at a certain price by comparing the magnitudes of recent gains and losses over a certain amount
   of time. It is on a scale of 0-100 where generally >70 means overbought and the price might drop due to people betting on the reversal and a value of <30 means it is oversold
-  and the price might increase due to people betting on a reversal from possibly a bit of bad press, for instance.)</p>
+  (possibly due to sudden bad press) and the price might increase due to people betting on a reversal since they believe the intrinsic value is above the current one.</p>
 <h4>Plotting Bollinger Bands on a graph around the stock price: </h4>
-<p>What are Bollinger Bands. In essence, they use the standard deviation of a set of data from the rolling average to plot
-an upper band which if the stock price reaches people believe this means the stock is overbought and people may soon bet on the reversal and sell.
+<p>What are Bollinger Bands? In essence, they use the standard deviation of a set of data from the rolling average to plot
+an upper band, which if the stock price reaches some traders believe this means the stock is overbought and people may soon bet on the reversal and sell.
 Or, if the stock price reaches the bottom band, some people believe this means the stock has been oversold and the price
 might rise. Around 90% of price action happens bwtween the two bands.</p>
 <img src="yf7.png" style="width:78%" onclick="onClick(this)" alt="Generating">
