@@ -108,14 +108,18 @@ might rise. Around 90% of price action happens bwtween the two bands.</p>
 <img src="yf7.png" style="width:78%" onclick="onClick(this)" alt="Generating">
 <p>The code above starts with the same 2 lines to get market data (specifically Closing prices and their corresponding dates).
 Then, we use the line bol = ta.volatility.BollingerBands(msft["Close"]) to define the variable bol to the technical analysis library,
-to the section on volatility where you will find Bollinger Bands and parsing the closing prices to calculate the standard deviation.
-We then make 2 more variables for each band and then plot the stock price and the lower & higher band.:
+to the section on volatility where you will find Bollinger Bands where we parse the closing prices to calculate the standard deviation.
+We then make 2 more variables for each band and then plot the stock price and the lower & higher bands.
 </p>
 <p>I also added titles and labels to each curve and put in a legend in the top left to make it a bit easier to interpret.</p>
 <img src="yf8.png" style="width:70%" onclick="onClick(this)" alt="Generating">
-<p>Personally, I am not a huge fan of Bollinger Bands. Even though it can do well as an addition to your investment decisions, I wouldn't make any trades solely on BB patterns.
-For instance, in the graph above there are moments where the stock price hits the lower band and proceeds with a rise in price as expected, for instance in Jan 2022, but there
-are some times (like at the start) where the stock price is hugging the upper band for about a month (even has a breakout) between November and December 2021 but showed no signs of reversal.</p>
+<p>Personally, I am a fan of Bollinger Bands. Even though it can do well as an addition to your investment decisions, I wouldn't make any trades solely on BB patterns.
+  I also think this way for RSI, I think it can be useful to help make an investment decision but I think too many people get carried away and use it as their only reason for 
+  an investment decision. </p>
+<p>For instance, in the graph above, during near the end in January 2022 the price moves very closely to the lower band and continues falling in price like expected. Until, 
+  there is a breakout (where the stock price leaves the bounds of the two bands) which means that what happens next cannot be predicted at all - the price could rise or
+  fall a lot but there is no way of telling by just using Bolling Bands).</p>
+
 <h4>Plotting trading volume:</h4>
 <p>Analysing trading volume can also be very important when making an investment decision. If we go back to the market history on MSFT:</p>
 <img src="yf1.png" style="width:44%" onclick="onClick(this)" alt="Generating">
