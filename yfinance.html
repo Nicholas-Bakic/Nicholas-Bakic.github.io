@@ -63,10 +63,10 @@ Then we can pick a supported stock like Microsoft (Symbol: MSFT) in order to get
 <p>Getting market data on MSFT, including Open, High, Low, Close prices and volume traded in a specific time frame e.g. 100 days</p>
 <p>.history gathers all the market history data Yahoo has.</p>
 <img src="yf1.png" style="width:44%" onclick="onClick(this)" alt="Generating">
-<p>Here ^ we had to use the Ticker module in order to access the ticker data from the API</p>
-<p>In order to get some data (from the last 4 years) for fundamental analysis like Revenue, Cash, Long term debt and Total assets/liabilities:</p>
+<p>Here ^ we had to use the Ticker module in order to access the ticker data from the API.</p>
+<p>In order to get some data (from the last 4 years) for fundamental analysis like Revenue, Cash, Long term debt and Total assets/liabilities, use:</p>
 <img src="yf2.png" style="width:35%" onclick="onClick(this)" alt="Generating">
-<p>You can use this information to do a couple calculations:</p>
+<p>You can use this information to do a couple of calculations:</p>
 <p>For instance, we can find out if the long term debt of Microsoft is growing by doing msft.balance_sheet and then
 using .iloc[] to find the location of a specific piece of data. If you look back on the balance sheet, on the third to last row
 is their long term debt for the last 4 years. We can say this row number is -3 by working from the bottom. Then we look at the data
