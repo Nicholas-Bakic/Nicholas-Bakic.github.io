@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Nicholas-Bakic</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>My project<br></b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <p>Click below to go to:</p>
+    <p><a href="index.html">Home</a></p>
+    <p><a href="jupyter.html">Jupyter lab - python</a></p>
+    <p><a href="economics.html">Economics</a></p>
+    <p><a href="maths.html">AS Maths</a></p>
+    <p><a href="fm.html">Going ahead in Further Maths</a></p>
+    <p><a href="yfinance.html">Python for analysis</a></p>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Contents</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Home</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Python for analysis</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+<h5>Here I am going to show you how to use the Python libraries: Yahoo! Finance and ta (short for technical analysis)in
+order to perform fundamental and technical analysis on any stock / forex rates / index funds that the Yahoo finance API supports (e.g AAPL, ^FTSE, GBP/USD pair).
+</h5>
+
+<h5>At the start, I am going to show how I programmed each indicator/factor, section by section and then I am going to group them all up for analysis on any stock that the Yahoo Finance API supports.
+  And then at the end I am going to show you an example of performing fundamental and technical analysis for Microsoft stock which could help make an investment decision</h5>
+
+<p>Firstly, how do we get any market data from Yahoo Finance?</p>
+<p>We first need to import the Yahoo Finance  library called yfinance and we are going to make a shorter name for it just called yf
+Then we can pick a supported stock like Microsoft (Symbol: MSFT) in order to get some information on the company</p>
+
+<p>Getting market data on MSFT, including Open, High, Low, Close prices and volume traded in a specific time frame e.g 100 days</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf1.PNG" style="width:44%" onclick="onClick(this)" alt="Generating">
+<p>Here ^ we had to use the Ticker module in order to access the ticker data from the API</p>
+<p>In order to get some data (from the last 4 years) for fundamental analysis like Revenue, Cash, Long term debt and Total assets/liabilities:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf2.PNG" style="width:44%" onclick="onClick(this)" alt="Generating">
+<p>You can use this information to do a couple calculations:</p>
+<p>For instance, we can find out if the long term debt of Microsoft is growing by doing msft.balance_sheet and then
+using .iloc[] to find the location of a specific piece of data. If you look back on the balance sheet, on the third to last row
+is their long term debt for the last 4 years. We can say this row number is -3 by working from the bottom. Then we look at the data
+on the first and second columns (or using 0 and 1 for iteration in Python) to see the debt in the last 2 years.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf6.PNG" style="width:44%" onclick="onClick(this)" alt="Generating">
+<p>We can then use the code above to compare the two values and calculate if their long term debt has grown in the past year</p>
+
+<p>If you do msft.info you also gets lots of information, so much it doesn't even fit on the page. So you can specify which data you want to pick
+out, for instance, the trailing PE and forward PE. PE stands for Price to eanrings ratio which some people like to use in order to try
+to determine if a stock price is overvalued by comparing this value with similar companies. A "forward PE" is the estimated, future PE ratio, the trailing PE value
+creates a PE value based on previous and current prices to find what the current PE ratio is.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf3.PNG" style="width:30%" onclick="onClick(this)" alt="Generating">
+<h4>Let's start plotting:</h4>
+<p>We can plot the stock price on a graph (comments on the code itself explain most lines)</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf4.PNG" style="width:80%" onclick="onClick(this)" alt="Generating">
+<p>You can also find out if the company's earnings have increased or not by selecting it from the .earnings dataframe:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf12.PNG" style="width:30%" onclick="onClick(this)" alt="Generating">
+<h4>Technical analysis indicators:</h4>
+<p>Here I am going to show you how to implement technical analysis with Python. We are going to be able to use
+indicators like RSI and bollinger bands by using the ta (technical analyis) library.</p>
+
+<p>Let's use Facebook as an example here which will be especially entertaining since the stock price just fell a couple of
+days ago due to a sharp rise in expenses and overall less daily users which together make for low future confidence in the company.</p>
+
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf5.PNG" style="width:65%" onclick="onClick(this)" alt="Generating">
+<p>So, what is happening here?</p>
+<p>Well on line 5 we use .reset_index()[["Date", Close]] in order to pick out specifically all of the data of dates and closing prices which is in a form we
+can easily plot on a graph with plt.plot. Then, ta.momentum.RSIIndicator...).rsi() basically means that from the
+  ta library, go to the module on momentum indicators which is where the RSI indicator is and .rsi() calculates these values for us.
+
+<p>Note, RSI (Relative Strength Index is used to measure of a stock is oversold or overbought by comparing the magnitudes of recent gains and losses over a certain amount
+  of time. It is on a scale of 0-100 where generally >70 means overbought and the price might drop due to people betting on the reversal and a value of <30 means it is oversold
+  and the price might increase due to people betting on a reversal from possibly a bit of bad press, for instance.)</p>
+<h4>Plotting Bollinger Bands on a graph around the stock price: </h4>
+<p>What are Bollinger Bands. In essence, they use the standard deviation of a set of data from the rolling average to plot
+an upper band which if the stock price reaches people believe this means the stock is overbought and people may soon bet on the reversal and sell.
+Or, if the stock price reaches the bottom band, some people believe this means the stock has been oversold and the price
+might rise. Around 90% of price action happens bwtween the two bands.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf7.PNG" style="width:78%" onclick="onClick(this)" alt="Generating">
+<p>The code above starts with the same 2 lines to get market data (specifically Closing prices and their corresponding dates).
+Then, we use the line bol = ta.volatility.BollingerBands(msft["Close"]) to define the variable bol to the technical analysis library,
+to the section on volatility where you will find Bollinger Bands and parsing the closing prices to calculate the standard deviation.
+We then make 2 more variables for each band and then plot the stock price and the lower & higher band.:
+</p>
+<p>I also added titles and labels to each curve and put in a legend in the top left to make it a bit easier to interpret.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf8.PNG" style="width:70%" onclick="onClick(this)" alt="Generating">
+<p>Personally, I am not a huge fan of Bollinger Bands. Even though it can do well as an addition to your investment decisions, I wouldn't make any trades solely on BB patterns.
+For instance, in the graph above there are moments where the stock price hits the lower band and proceeds with a rise in price as expected, for instance in Jan 2022, but there
+are some times (like at the start) where the stock price is hugging the upper band for about a month (even has a breakout) between November and December 2021 but showed no signs of reversal.</p>
+<h4>Plotting trading volume:</h4>
+<p>Analysing trading volume can also be very important when making an investment decision. If we go back to the market history on MSFT:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf1.PNG" style="width:44%" onclick="onClick(this)" alt="Generating">
+<p>We can see that there is trading volume recorded as well.</p>
+<p>Let's see the first part of the code which will plot the entire trading volume history for MSFT:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf9.PNG" style="width:25%" onclick="onClick(this)" alt="Generating">
+<p>hist.shape[0] tells us the amount of rows on the table msft.history which is important for making the graph later. We can see that there are 9051 days where the trading volumes were recorded
+which goes back all the way to 1986 which is when Microsoft went public.</p>
+<p>The next part of the code, below, shows a for loop running through all of the 9051 rows, then going to the 5th column (starting from zero is 4) and picking out that piece
+of data which is the volume traded on that day.</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf10.PNG" style="width:20%" onclick="onClick(this)" alt="Generating">
+<p>The rest of the code and the output is as follows:</p>
+<img src="C:\Users\Nicholas\Downloads\python files\blog\image\yf11.PNG" style="width:80%" onclick="onClick(this)" alt="Generating">
+<p>temphist is used only to get the exact dates of the volumes traded. Once plotted on the last line, each date is matched up with the correct trading volume.</p>
+<p>The last two lines are just to put the y axis numbers in terms of non-standard form, which you have to manually set otherwise it would show in terms
+of 0.2 x 10<sup>9</sup> and so on.</p>
+<h4>Putting it all together</h4>
+<p>Now let's put it all together in one program:</p>
+<img src="C:\Users\Nicholas\Downloads\GIF.gif" style="width:100%" onclick="onClick(this)" alt="Generating">
+
+
+
+
+  </div>
+
+
+  <!-- End page content -->
+  </div>
+
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  </script>
+
+  </body>
+  </html>
