@@ -62,13 +62,13 @@ Then we can pick a supported stock like Microsoft (Symbol: MSFT) in order to get
 <img src="yf1.png" style="width:44%" onclick="onClick(this)" alt="Generating">
 <p>Here ^ we had to use the Ticker module in order to access the ticker data from the API</p>
 <p>In order to get some data (from the last 4 years) for fundamental analysis like Revenue, Cash, Long term debt and Total assets/liabilities:</p>
-<img src="yf2.png" style="width:44%" onclick="onClick(this)" alt="Generating">
+<img src="yf2.png" style="width:40%" onclick="onClick(this)" alt="Generating">
 <p>You can use this information to do a couple calculations:</p>
 <p>For instance, we can find out if the long term debt of Microsoft is growing by doing msft.balance_sheet and then
 using .iloc[] to find the location of a specific piece of data. If you look back on the balance sheet, on the third to last row
 is their long term debt for the last 4 years. We can say this row number is -3 by working from the bottom. Then we look at the data
 on the first and second columns (or using 0 and 1 for iteration in Python) to see the debt in the last 2 years.</p>
-<img src="yf6.png" style="width:44%" onclick="onClick(this)" alt="Generating">
+<img src="yf6.png" style="width:37%" onclick="onClick(this)" alt="Generating">
 <p>We can then use the code above to compare the two values and calculate if their long term debt has grown in the past year</p>
 
 <p>If you do msft.info you also gets lots of information, so much it doesn't even fit on the page. So you can specify which data you want to pick
@@ -80,7 +80,7 @@ creates a PE value based on previous and current prices to find what the current
 <p>We can plot the stock price on a graph (comments on the code itself explain most lines)</p>
 <img src="yf4.png" style="width:80%" onclick="onClick(this)" alt="Generating">
 <p>You can also find out if the company's earnings have increased or not by selecting it from the .earnings dataframe:</p>
-<img src="yf12.png" style="width:30%" onclick="onClick(this)" alt="Generating">
+<img src="yf12.png" style="width:37%" onclick="onClick(this)" alt="Generating">
 <h4>Technical analysis indicators:</h4>
 <p>Here I am going to show you how to implement technical analysis with Python. We are going to be able to use
 indicators like RSI and bollinger bands by using the ta (technical analyis) library.</p>
@@ -118,7 +118,7 @@ are some times (like at the start) where the stock price is hugging the upper ba
 <img src="yf1.png" style="width:44%" onclick="onClick(this)" alt="Generating">
 <p>We can see that there is trading volume recorded as well.</p>
 <p>Let's see the first part of the code which will plot the entire trading volume history for MSFT:</p>
-<img src="yf9.png" style="width:25%" onclick="onClick(this)" alt="Generating">
+<img src="yf9.png" style="width:21%" onclick="onClick(this)" alt="Generating">
 <p>hist.shape[0] tells us the amount of rows on the table msft.history which is important for making the graph later. We can see that there are 9051 days where the trading volumes were recorded
 which goes back all the way to 1986 which is when Microsoft went public.</p>
 <p>The next part of the code, below, shows a for loop running through all of the 9051 rows, then going to the 5th column (starting from zero is 4) and picking out that piece
