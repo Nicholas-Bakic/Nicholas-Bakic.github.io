@@ -100,6 +100,23 @@ This happened because Kraft Heinz reported losses in earnings and the SEC had se
 <p>There were a lot of after hours trading orders which were executed as soon as markets opened; the price immediately plummeted when they opened back up. Since it was so quick, our 
 trading program couldn't sell fast enough, as it buys/sells on closing prices only.</p>
 <img src="backtest5.png" style="width:105%" onclick="onClick(this)" alt="Stacking graphs horizontally">
+    
+<h2>Alternatively, we can manually code the backtesting ourselves:</h2>
+<p>If you think that using the backtrader library is either a bit confusing or that you don;t have much customisation over it, you can code the backtesting manually</p>
+<p>Let's make a simple trading strategy. For instance, if the price of a certain asset falls for 3 days in a row, you buy it and hold for 5 days (a trading week).</p>
+<p>We can do this by iterating through all of the prices and comparing prices next to each other in the list and decide whether to buy</p>
+<img src="manual.png" style="width:60%" onclick="onClick(this)" alt="Stacking graphs horizontally">
+<p>The code above shows how we can load stock of prices (which the user can specify) and then it firstly compares 4 prices that are next to each other to determine
+whether there has been a fall in price for 3 days. Then the buy price is deducted from your starting balance (here, $10,000) and then if the sell price which is in
+5 days times has already passed, the difference between the buy and sell prices is added on to the balance. If the sell date has not come yet, e.g. if it is in the future,
+then at the end of the runtime, the program will print if you are currently holding any stock that is waiting to be sold.</p>
+<p>The "try" and "except" pieces in the code are there since if the sell date has not come yet, without these in place, the program would display an error since the sell date is
+not in the list of close prices. So, I implement the "try" and "except" parts to stop the error form showing and just recording the fact that we now have to hold shares that we buy from now on,
+while still including the balance deduction.</p>
+<p>In the code below, I chose Google stock (GOOG) and to test the strategy on the last 100 days (100d).You can see that at the end, your total (or cumulative) profit, best and worst trades are shown.
+So is your balance and any stock that you are still holding and waiting for the sale date to come.<p>
+<p>For this demonstration, I have also included all of the logs for buy prices, sell prices, profit, balance updates and which points I hold a stock since the sell date has not arrived yet.</p>
+<img src="manual2.png" style="width:54%" onclick="onClick(this)" alt="Stacking graphs horizontally">
 
     
 <!-- End of website code here -->
