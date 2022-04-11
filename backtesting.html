@@ -117,6 +117,9 @@ everytime I make a new buy or sell icon, it makes another icon row in the legend
 exception by taking a specific sell point that I know is true, so I just reuse sell_price since this must be a price at which a sell was made, and then
 I plot that point before the rest of the sell points in order to make a legend for that one sell point, then I make a for loop to show the rest of the 
 sell points which look the same as the individual sell point in the legend, which I coded before the for loop.</p>
+<p>I had to do something similar to the buy points as well to make sure that the legend would not be filled with 20 red icons. First, I make a legend_count
+which just is a count to find the very first buy point that the strategy makes. Then, when legend_point is equal to 1, which means we made out first buy,
+we display the legend now and never call it again, since there would just be 20 red icons flooding the figure from the legend.</p>
 <p>The "try" and "except" pieces in the code are there since if the sell date has not come yet, without these in place, the program would display an error since the sell date is
 not in the list of close prices. So, I implement the "try" and "except" parts to stop the error form showing and just recording the fact that we now have to hold shares that we buy from now on,
 while still including the balance deduction.</p>
