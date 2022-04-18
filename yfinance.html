@@ -48,28 +48,28 @@ body {font-size:16px;}
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-xxxlarge w3-text-red"><b>Python for analysis</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-<h5>Here I am going to show you how to use the Python libraries Yahoo! Finance and ta (short for technical analysis)in
+<h5>Here I am going to show you how to use the Python libraries Yahoo Finance and ta (short for technical analysis) in
 order to perform fundamental and technical analysis on any stock that the Yahoo Finance API supports.
-The methods used for plotting graphs can also be used for forex rates and index funds (e.g. ^FTSE, GBP-USD). But,
+The methods used for plotting graphs can also be used for FX rates and index funds (e.g. ^FTSE, GBP-USD). But,
 some of the fundamental analysis indicators like measuring earnings and debts cannot be used. 
 </h5>
 
-<h5>At the start, I am going to show how I programmed each indicator/factor, section by section, and then I am going to group them all up for analysis on Google,
+<h5>At the start, I am going to show how I programmed each indicator/factor, section by section, and then I am going to group them all up for analysis on Google (GOOG) stock,
   which could help make an investment decision.</h5>
 
 <p>Firstly, how do we get any market data from Yahoo Finance?</p>
-<p>We first need to import the Yahoo Finance library called yfinance and we are going to make a shorter name for it just called yf.
+<p>We first need to import the Yahoo Finance library called yfinance and we are going to make a shorter name for it, just called yf.
 Then we can pick a supported stock like Microsoft (Symbol: MSFT) in order to get some information on the company.</p>
 
-<p>Getting market data on MSFT, including Open, High, Low, Close prices and volume traded in a specific time frame e.g. 100 days</p>
+<p>Getting market data on MSFT, including Open, High, Low, Close prices and volume traded in a specific time frame e.g. 100 days:</p>
 <p>.history gathers all the market history data Yahoo has.</p>
 <img src="yf1.png" style="width:44%" onclick="onClick(this)" alt="Generating">
-<p>Here ^ we had to use the Ticker module in order to access the ticker data from the API.</p>
+<p>Here ^ we had to use the Ticker function in order to access the ticker data from the API.</p>
 <p>In order to get some data (from the last 4 years) for fundamental analysis like Revenue, Cash, Long term debt and Total assets/liabilities, use:</p>
 <img src="yf2.png" style="width:35%" onclick="onClick(this)" alt="Generating">
 <p>You can use this information to do a couple of calculations:</p>
 <p>For instance, we can find out if the long term debt of Microsoft is growing by doing msft.balance_sheet and then
-using .iloc[] to find the location of a specific piece of data. If you look back on the balance sheet, on the third to last row
+using .iloc[] to find the location of a specific piece of data. If you look back on the balance sheet, on the third to last row,
 is their long term debt for the last 4 years. We can say this row number is -3 by working from the bottom. Then we look at the data
 on the first and second columns (or using 0 and 1 for iteration in Python) to see the debt in the last 2 years.</p>
 <img src="yf6.png" style="width:37%" onclick="onClick(this)" alt="Generating">
