@@ -51,8 +51,8 @@ body {font-size:16px;}
   even though previous market history data may not represent future stock prices.
 </h5>
 <p>Here I am going to test a trading strategy where when the price is increasing and hits the Simple Moving Average (SMA) of 50 days, which is the average price of the stock
-from the last 50 days, then the script will buy long. Finally, when the price of the stock is decreasing it will sell once it hits the SMA again. This is used because in theory
-we will be able to catch any large upswings in price and avoid the crashing in price.</p>
+from the last 50 days, then the script will buy long. Finally, when the price of the stock is decreasing it will sell once it hits the SMA again. This is used because, in theory,
+we will be able to catch any large upswings in price and avoid the price crashes.</p>
 
 <p>Note, the backtrader python library doesn't really work with the Yahoo Finance API very well (which is what I used in "Python for analysis" on this website). So, we cannot use the yfinance Python library (or at least nearly as easily) so
 instead I went to the Yahoo finance website and downloaded the market data as a CSV file to use for this, which is basically the manual alternative to using the API.
