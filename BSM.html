@@ -56,8 +56,13 @@ Below, I explore how to use Python to get options data from Yahoo Finance into P
 <p>Now we can use the Black-Sholes model: here is the formula and its inputs:</p>
 <img src="BSM2.png" style="width:35%" onclick="onClick(this)" alt="Stacking graphs horizontally">
 
-<p>Now, we can plug in the variables of an option with ,rounded numbers for simplicity, and find its fair value:</p>
-<img src="BSM3.png" style="width:45%" onclick="onClick(this)" alt="Stacking graphs horizontally">
+<p>Here is the code that I made; it requires stock ticker, the expiry date of the option and the contract name of this option.</p>
+<p>It works by finding the column number of the contract number (in order to find all of its relevant data),  finding the stock price of the ticker and by using
+the US-10 year yield as the risk free rate of return.</p>
+<p>Afterwards, we plug in the calculations into the formula and we can also configure the type of option (call or put), but for this example we are just using calls.</p>
+<p>Here is an example of me inputting a specific Cloudflare(NET) call contract and the Black-Scholes theoretical fair price as output:</p>
+<img src="BSMcode1.png" style="width:50%" onclick="onClick(this)" alt="Stacking graphs horizontally">
+<img src="BSMcode2.png" style="width:50%" onclick="onClick(this)" alt="Stacking graphs horizontally">
 
 <!-- End of website code here -->
 </div>
