@@ -72,7 +72,7 @@ on the first and second columns (or using 0 and 1 for iteration in Python) to se
 <img src="yf6.png" style="width:37%" onclick="onClick(this)" alt="Generating">
 <p>We can then use the code above to compare the two values and calculate if their long term debt has grown in the past year</p>
 
-<p>If you do msft.info you also gets lots of information, so much it doesn't even fit on the page. So you can specify which data you want to pick
+<p>Doing msft.info outputs lots of data, so much it doesn't even fit on the page. So you can specify which data you want to pick
 out, for instance, the trailing PE and forward PE. PE stands for Price to Earnings ratio which some people like to use in order to try
 to determine if a stock price is overvalued by comparing this value with similar companies. A "forward PE" is the estimated, future PE ratio but the trailing PE value
 is based on previous and current prices to find what the current PE ratio is.</p>
@@ -103,7 +103,7 @@ can easily plot on a graph with plt.plot where the corresponding dates and price
 an upper band, which if the stock price reaches some traders believe this means the stock is overbought and people may soon bet on the reversal and sell.
 Or, if the stock price reaches the bottom band, some people believe this means the stock has been oversold and the price
 might rise. The wider the gap between the upper band and the lower band, the more volatility (potentially large stock price movements). 
-Around 95% of price action happens bwtween the two bands as the bollinger bands are 2 standard deviations away from the Simple moving average of 20 days.</p>
+Around 95% of price action happens between the two bands as the bollinger bands are 2 standard deviations away from the Simple moving average of 20 days.</p>
 <img src="yf7.png" style="width:78%" onclick="onClick(this)" alt="Generating">
 <p>The code above starts with the same 2 lines to get market data (specifically Closing prices and their corresponding dates).
 Then, we use the line bol = ta.volatility.BollingerBands(msft["Close"]) to define the variable bol to the technical analysis library,
@@ -116,9 +116,9 @@ The line msft["SMA20"] = talib.SMA(msft["Close"], timeperiod = 20) uses the tali
 <p>Personally, I am a fan of Bollinger Bands. Even though it can do well as an addition to your investment decisions, I wouldn't make any trades solely on BB patterns.
   I also think this way for RSI, I think it can be useful to help make an investment decision but I think too many people get carried away and use it as their only reason for 
   an investment decision. </p>
-<p>For instance, in the graph above, during near the end in January 2022 the price moves very closely to the lower band and continues falling in price like expected. Until, 
+<p>For instance, in the graph above, near the end in January 2022 the price moves very closely to the lower band and continues falling in price like expected. Until, 
   there is a breakout (where the stock price leaves the bounds of the two bands) which means that what happens next cannot be predicted at all - the price could rise or
-  fall a lot but there is no way of telling by just using Bolling Bands).</p>
+  fall a lot but there is no way of telling by just using Bollinger Bands).</p>
 
 <h4>Plotting trading volume:</h4>
 <p>Analysing trading volume can also be very important when making an investment decision. If we go back to the market history on MSFT:</p>
