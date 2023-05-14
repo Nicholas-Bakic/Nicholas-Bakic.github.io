@@ -82,21 +82,21 @@ and clicking download like so:</p>
 
 <p>Towards the later stages of the chart, just before the massive, continuous rise in price, there is a dip, let's zoom in.</p>
 <img src="backtest4.png" style="width:40%" onclick="onClick(this)" alt="Stacking graphs horizontally">
-<p>Due to the nature of this trading strategy, we were able to sell our share (red downward arrow head) before the price decreased by $370 since it crossed the rolling average on a decline.
-  Then, we were able to buy back again (green upward arrow heads) when it had risen in price; although we could've bought at a cheaper price at the bottom of the dip, at least we avoided it.</p>
+<p>Due to the nature of this trading strategy, we were able to sell our share (red downward arrowhead) before the price decreased by $370 since it crossed the rolling average on a decline.
+  Then, we were able to buy back again (green upward arrowheads) when it had risen in price; although we could've bought at a cheaper price at the bottom of the dip, at least we avoided it.</p>
 <p>However, had we just bought GOOG stock at the very beginning (when it was worth just under $50) and just held it until today (priced at $2,682) we would have been able
 to buy 200 shares with our starting $10k, which could've made our account worth $536,400 today. So, even though we made $17,000 with this trading strategy, we could have made $526,400 by just simply holding it.</p>
 
 <p>Overall, this is a clearly very simple trading strategy which only works in bull markets since we cannot short sell and we are relying on the price increasing in order for
-it to cross the SMA and buy. As a result, it cannot take advantage of any dips in price, it just avoids them. Futhermore, the timing is never great; we only made money
+it to cross the SMA and buy. As a result, it cannot take advantage of any dips in price, it just avoids them. Furthermore, the timing is never great; we only made money
 because GOOG stock increased significantly during the later quarter of the chart. Only because we had chosen a very good performing stock to test this strategy with is why we made any money at all.</p>
-<h3>Using the strategy in bear markets</h3>
-<p>In bear markets, this trading strategy is quite bad. Take Kraft Heinz Company (KHC stock) for instance, which has been on the decline for a few years. </p>
+<h3>Using the strategy in bear-markets</h3>
+<p>In bear-markets, this trading strategy is quite bad. Take Kraft Heinz Company (KHC stock) for instance, which has been on the decline for a few years. </p>
 <p>Below, you can see that not only did we lose money ($4,263.70), but you can tell from the lowest down red dot, near the top of the chart, that our worst trade lost us close to $2,000 on 22nd Feb 2019.
 This happened because Kraft Heinz reported losses in earnings and the SEC had served them with a subpoena to investigate their accounting. </p>
 <p>We lost so much money here because the difference in price between the day before's closing price and the next day's opening price was about $13, or a 27% fall.</p>
-<p>There were a lot of after hours trading orders which were executed as soon as markets opened; the price immediately plummeted when they opened back up. Since it was so quick, our 
-trading program couldn't sell fast enough, as it buys/sells on closing prices only.</p>
+<p>There were a lot of after-hours trading orders which were executed as soon as markets opened; the price immediately plummeted when they opened back up. Since it was so quick, our 
+trading program could not sell fast enough, as it buys/sells on closing prices only.</p>
 <img src="backtest5.png" style="width:105%" onclick="onClick(this)" alt="Stacking graphs horizontally">
     
 <h2>Alternatively, we can manually code the backtesting ourselves:</h2>
