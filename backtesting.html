@@ -117,7 +117,7 @@ then at the end of the runtime, the program will print if you are currently hold
 <p style="max-width: 65%; text-align: left;">I then record all of the buys and sells that the strategy makes by creating a new column in the dataframe to plot at the bottom of the program.</p>
 <p style="max-width: 65%; text-align: left;">Programming a legend for asset price, buy and sell icons was particularly difficult. I couldn't plot it like how I have in the rest of the website because
 everytime I make a new buy or sell icon, it makes another icon row in the legend box which winds up just taking up the whole figure, like so:
-<img src="legenderror.png" style="width:58%" onclick="onClick(this)" alt="1">  
+<img src="legenderror.png" style="width:78%" onclick="onClick(this)" alt="1">  
 <p style="max-width: 65%; text-align: left;"></p>So, I had to make an exception by taking a specific sell point that I know is true, so I just reuse sell_price since this must be a price at which a sell was made, and then
 I plot that point before the rest of the sell points in order to make a legend for that one sell point, then I make a for loop to show the rest of the 
 sell points which look the same as the individual sell point in the legend, which I coded before the for loop.</p>
