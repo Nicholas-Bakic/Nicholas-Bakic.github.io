@@ -47,20 +47,20 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-black"><b>Black-Scholes model</b></h1>
     <hr style="width:50px;border:5px solid black" class="w3-round">
 
-<h5>The Black-Scholes model aims to calculate the fair or theoretical price of a European call/put option, meaning that the option cannot be exercised before the expiration date.
+<h5 style="max-width: 65%; text-align: left;">The Black-Scholes model aims to calculate the fair or theoretical price of a European call/put option, meaning that the option cannot be exercised before the expiration date.
 Below, I explore how to use Python to get options data from Yahoo Finance into Python and apply the Black-Scholes model.</h5>
 
-<p>Getting market data for Cloudflare options (you can specify either calls or puts):</p>
+<p style="max-width: 65%; text-align: left;">Getting market data for Cloudflare options (you can specify either calls or puts):</p>
 <img src="BSM1.png" style="width:65%" onclick="onClick(this)" alt="Stacking graphs horizontally">
 
-<p>Now we can use the Black-Sholes model: here is the formula and its inputs:</p>
+<p style="max-width: 65%; text-align: left;">Now we can use the Black-Sholes model: here is the formula and its inputs:</p>
 <img src="BSM2.png" style="width:35%" onclick="onClick(this)" alt="Stacking graphs horizontally">
 
-<p>Here is the code that I made; it requires the stock ticker, expiry date and contract name of some option.</p>
-<p>It works by finding the column number of the contract number (in order to find all of its relevant data),  finding the stock price of the ticker and by using
+<p style="max-width: 65%; text-align: left;">Here is the code that I made; it requires the stock ticker, expiry date and contract name of some option.</p>
+<p style="max-width: 65%; text-align: left;">It works by finding the column number of the contract number (in order to find all of its relevant data),  finding the stock price of the ticker and by using
 the US-10 year yield as the risk free rate of return.</p>
-<p>Afterwards, we plug in the calculations into the formula and we can also configure the type of option (call or put), but for this example we are just using calls.</p>
-<p>Here is an example of me inputting a specific Cloudflare(NET) call contract and the Black-Scholes theoretical fair price as output:</p>
+<p style="max-width: 65%; text-align: left;">Afterwards, we plug in the calculations into the formula and we can also configure the type of option (call or put), but for this example we are just using calls.</p>
+<p style="max-width: 65%; text-align: left;">Here is an example of me inputting a specific Cloudflare(NET) call contract and the Black-Scholes theoretical fair price as output:</p>
 <img src="BSMcode1.png" style="width:45%" onclick="onClick(this)" alt="Stacking graphs horizontally">
 <br class=”blank” />
 <img src="BSMcode2.png" style="width:45%" onclick="onClick(this)" alt="Stacking graphs horizontally">
