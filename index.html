@@ -80,7 +80,27 @@ body {font-size:16px;}
   <p>Pulling market prices of options</p>
   <p>Applying the Black-Scholes model</p>
 
+<!-- modify this form HTML and place wherever you want your form -->
+<div class="w3-container" style="margin-top:50px;">
+  <h2>Upload a File or Send a Message</h2>
+  <form
+    action="https://formspree.io/f/xzzgywad"
+    method="POST"
+    enctype="multipart/form-data"
+    class="w3-container w3-card-4 w3-light-grey w3-padding"
+  >
+    <label class="w3-text-black"><b>Your Email:</b></label>
+    <input class="w3-input w3-border" type="email" name="email" required><br>
 
+    <label class="w3-text-black"><b>Your Message:</b></label>
+    <textarea class="w3-input w3-border" name="message" rows="4"></textarea><br>
+
+    <label class="w3-text-black"><b>Attach a File:</b></label>
+    <input class="w3-input w3-border" type="file" name="attachment" required><br>
+
+    <button class="w3-button w3-black" type="submit">Send</button>
+  </form>
+</div>
   
 <!-- End page content -->
 </div>
